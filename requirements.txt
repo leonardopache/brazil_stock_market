@@ -1,0 +1,5 @@
+chardet
+urllib3
+requests
+tqdm
+pandas

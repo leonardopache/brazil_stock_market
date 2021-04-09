@@ -9,8 +9,13 @@ import requests
 import urllib3
 from ..utils.array_utils import split_array
 from ..utils.manage_threads import create_threads
-from ..utils.constants import B3_SISWEBB3_BASE, B3_SISWEBB3_FILTER_LEGAL_ID, B3_SISWEBB3_ISINPAGE
 from ..utils.pandas_util import PandasUtil
+from ..utils.constants import (
+    B3_SISWEBB3_BASE,
+    B3_SISWEBB3_FILTER_LEGAL_ID,
+    B3_SISWEBB3_ISINPAGE
+)
+
 
 urllib3.disable_warnings()
 NUM_CIA_THREADS = 10

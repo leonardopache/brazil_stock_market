@@ -57,9 +57,11 @@ class MarketDataScraper:
             # identify last update and download necessary files
             last_date = MarketDataManager.get_last_series_update()
             if not last_date:
-                # download series for the current year
-                file_name = date.today().year
-                DownloadFilesUtil.stock_market_series(file_name='A'+str(file_name))
+                # download series for the 2 previous year and the actual
+                year_list = [year for year in range(date.today().year-2, date.today().year+1)]
+                for year in year_list:
+                    file_name = year
+                    DownloadFilesUtil.stock_market_series(file_name='A'+str(file_name))
 
             else:
                 # create a list of days to download

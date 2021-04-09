@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='brazil_stock_market',
-      version='0.6',
+      version='0.8',
       description='Scraper for assets available in brazilian Stock Exchange BM&FBOVESPA',
       url='',
       author='Leonardo Pache',

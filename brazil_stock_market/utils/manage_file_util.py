@@ -9,10 +9,14 @@ from ..utils import logging
 
 
 def get_folder_root():
+    folder_ = ''
     try:
-        return os.environ['BRA_OUT_FOLDER']
+        folder_ = os.environ['BR_OUT_FOLDER']
     except Exception as e:
-        return ''
+        pass
+
+    logging.debug('Getting csv folder root: \'{}\''.format(folder_))
+    return folder_
 
 
 def get_real_path():
